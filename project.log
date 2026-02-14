@@ -117,3 +117,548 @@
 2026-02-09 19:22:58 | INFO | P05 | S001, North Market, Duluth, North, 2, 165.0, 82.5
 2026-02-09 19:22:58 | INFO | P05 | S003, Central Plaza, Mankato, South, 1, 60.0, 60.0
 2026-02-09 19:22:58 | INFO | P05 | END main()
+2026-02-09 19:25:38 | INFO | P05 | === RUN START ===
+2026-02-09 19:25:38 | INFO | P05 | project=P05 Pipeline Example (DuckDB)
+2026-02-09 19:25:38 | INFO | P05 | repo_dir=data-05-sql
+2026-02-09 19:25:38 | INFO | P05 | python=3.14.2
+2026-02-09 19:25:38 | INFO | P05 | os=Windows 11
+2026-02-09 19:25:38 | INFO | P05 | shell=powershell
+2026-02-09 19:25:38 | INFO | P05 | cwd=.
+2026-02-09 19:25:38 | INFO | P05 | github_actions=False
+2026-02-09 19:25:38 | INFO | P05 | START main()
+2026-02-09 19:25:38 | INFO | P05 | ROOT_DIR: C:\Repos\data-05-sql
+2026-02-09 19:25:38 | INFO | P05 | DATA_DIR: C:\Repos\data-05-sql\data\retail
+2026-02-09 19:25:38 | INFO | P05 | SQL_DIR: C:\Repos\data-05-sql\sql\duckdb
+2026-02-09 19:25:38 | INFO | P05 | DB_PATH: C:\Repos\data-05-sql\artifacts\duckdb\retail.duckdb
+2026-02-09 19:25:38 | INFO | P05 | RUN SQL script: C:\Repos\data-05-sql\sql\duckdb\case_retail_clean.sql
+2026-02-09 19:25:38 | INFO | P05 | DONE SQL script: C:\Repos\data-05-sql\sql\duckdb\case_retail_clean.sql
+2026-02-09 19:25:38 | INFO | P05 | RUN SQL script: C:\Repos\data-05-sql\sql\duckdb\case_retail_bootstrap.sql
+2026-02-09 19:25:38 | INFO | P05 | DONE SQL script: C:\Repos\data-05-sql\sql\duckdb\case_retail_bootstrap.sql
+2026-02-09 19:25:38 | INFO | P05 | 
+2026-02-09 19:25:38 | INFO | P05 | RUN SQL query: C:\Repos\data-05-sql\sql\duckdb\case_retail_query_store_count.sql
+2026-02-09 19:25:38 | INFO | P05 | ====================================
+2026-02-09 19:25:38 | INFO | P05 | case_retail_query_store_count.sql
+2026-02-09 19:25:38 | INFO | P05 | ====================================
+2026-02-09 19:25:38 | INFO | P05 | store_count
+2026-02-09 19:25:38 | INFO | P05 | 3
+2026-02-09 19:25:38 | INFO | P05 | 
+2026-02-09 19:25:38 | INFO | P05 | RUN SQL query: C:\Repos\data-05-sql\sql\duckdb\case_retail_query_sales_count.sql
+2026-02-09 19:25:38 | INFO | P05 | ====================================
+2026-02-09 19:25:38 | INFO | P05 | case_retail_query_sales_count.sql
+2026-02-09 19:25:38 | INFO | P05 | ====================================
+2026-02-09 19:25:38 | INFO | P05 | sale_count
+2026-02-09 19:25:38 | INFO | P05 | 5
+2026-02-09 19:25:38 | INFO | P05 | 
+2026-02-09 19:25:38 | INFO | P05 | RUN SQL query: C:\Repos\data-05-sql\sql\duckdb\case_retail_query_sales_aggregate.sql
+2026-02-09 19:25:38 | INFO | P05 | ====================================
+2026-02-09 19:25:38 | INFO | P05 | case_retail_query_sales_aggregate.sql
+2026-02-09 19:25:38 | INFO | P05 | ====================================
+2026-02-09 19:25:38 | INFO | P05 | sale_count, total_revenue, avg_sale_amount
+2026-02-09 19:25:38 | INFO | P05 | 5, 505.0, 101.0
+2026-02-09 19:25:38 | INFO | P05 | 
+2026-02-09 19:25:38 | INFO | P05 | RUN SQL query: C:\Repos\data-05-sql\sql\duckdb\case_retail_query_sales_by_category.sql
+2026-02-09 19:25:38 | INFO | P05 | ====================================
+2026-02-09 19:25:38 | INFO | P05 | case_retail_query_sales_by_category.sql
+2026-02-09 19:25:38 | INFO | P05 | ====================================
+2026-02-09 19:25:38 | INFO | P05 | product_category, sale_count, total_revenue, avg_sale_amount
+2026-02-09 19:25:38 | INFO | P05 | Outdoors, 1, 250.0, 250.0
+2026-02-09 19:25:38 | INFO | P05 | Clothing, 2, 180.0, 90.0
+2026-02-09 19:25:38 | INFO | P05 | Food, 2, 75.0, 37.5
+2026-02-09 19:25:38 | INFO | P05 | 
+2026-02-09 19:25:38 | INFO | P05 | RUN SQL query: C:\Repos\data-05-sql\sql\duckdb\case_retail_query_kpi_revenue.sql
+2026-02-09 19:25:38 | INFO | P05 | ====================================
+2026-02-09 19:25:38 | INFO | P05 | case_retail_query_kpi_revenue.sql
+2026-02-09 19:25:38 | INFO | P05 | ====================================
+2026-02-09 19:25:38 | INFO | P05 | store_id, store_name, city, region, sale_count, total_revenue, avg_sale_amount
+2026-02-09 19:25:38 | INFO | P05 | S002, Lakeside Shop, Ely, North, 2, 280.0, 140.0
+2026-02-09 19:25:38 | INFO | P05 | S001, North Market, Duluth, North, 2, 165.0, 82.5
+2026-02-09 19:25:38 | INFO | P05 | S003, Central Plaza, Mankato, South, 1, 60.0, 60.0
+2026-02-09 19:25:38 | INFO | P05 | END main()
+2026-02-12 21:28:35 | INFO | P05 | === RUN START ===
+2026-02-12 21:28:35 | INFO | P05 | project=P05 Pipeline Example (DuckDB)
+2026-02-12 21:28:35 | INFO | P05 | repo_dir=data-05-sql
+2026-02-12 21:28:35 | INFO | P05 | python=3.14.2
+2026-02-12 21:28:35 | INFO | P05 | os=Windows 11
+2026-02-12 21:28:35 | INFO | P05 | shell=powershell
+2026-02-12 21:28:35 | INFO | P05 | cwd=.
+2026-02-12 21:28:35 | INFO | P05 | github_actions=False
+2026-02-12 21:28:35 | INFO | P05 | START main()
+2026-02-12 21:28:35 | INFO | P05 | ROOT_DIR: C:\Repos\data-05-sql
+2026-02-12 21:28:35 | INFO | P05 | DATA_DIR: C:\Repos\data-05-sql\data\civic_event
+2026-02-12 21:28:35 | INFO | P05 | SQL_DIR: C:\Repos\data-05-sql\sql\duckdb
+2026-02-12 21:28:35 | INFO | P05 | DB_PATH: C:\Repos\data-05-sql\artifacts\duckdb\civic_event.duckdb
+2026-02-12 21:28:35 | INFO | P05 | RUN SQL script: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_clean.sql
+2026-02-12 21:46:06 | INFO | P05 | === RUN START ===
+2026-02-12 21:46:06 | INFO | P05 | project=P05 Pipeline Example (DuckDB)
+2026-02-12 21:46:06 | INFO | P05 | repo_dir=data-05-sql
+2026-02-12 21:46:06 | INFO | P05 | python=3.14.2
+2026-02-12 21:46:06 | INFO | P05 | os=Windows 11
+2026-02-12 21:46:06 | INFO | P05 | shell=powershell
+2026-02-12 21:46:06 | INFO | P05 | cwd=.
+2026-02-12 21:46:06 | INFO | P05 | github_actions=False
+2026-02-12 21:46:06 | INFO | P05 | START main()
+2026-02-12 21:46:06 | INFO | P05 | ROOT_DIR: C:\Repos\data-05-sql
+2026-02-12 21:46:06 | INFO | P05 | DATA_DIR: C:\Repos\data-05-sql\data\civic_event
+2026-02-12 21:46:06 | INFO | P05 | SQL_DIR: C:\Repos\data-05-sql\sql\duckdb
+2026-02-12 21:46:06 | INFO | P05 | DB_PATH: C:\Repos\data-05-sql\artifacts\duckdb\civic_event.duckdb
+2026-02-12 21:46:06 | INFO | P05 | RUN SQL script: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_clean.sql
+2026-02-13 19:04:12 | INFO | P05 | === RUN START ===
+2026-02-13 19:04:12 | INFO | P05 | project=P05 Pipeline (DuckDB) - Civic Event
+2026-02-13 19:04:12 | INFO | P05 | repo_dir=data-05-sql
+2026-02-13 19:04:12 | INFO | P05 | python=3.14.2
+2026-02-13 19:04:12 | INFO | P05 | os=Windows 11
+2026-02-13 19:04:12 | INFO | P05 | shell=powershell
+2026-02-13 19:04:12 | INFO | P05 | cwd=.
+2026-02-13 19:04:12 | INFO | P05 | github_actions=False
+2026-02-13 19:04:12 | INFO | P05 | START main()
+2026-02-13 19:04:12 | INFO | P05 | ROOT_DIR: C:\Repos\data-05-sql
+2026-02-13 19:04:12 | INFO | P05 | DATA_DIR: C:\Repos\data-05-sql\data\civic_event
+2026-02-13 19:04:12 | INFO | P05 | SQL_DIR: C:\Repos\data-05-sql\sql\duckdb
+2026-02-13 19:04:12 | INFO | P05 | DB_PATH: C:\Repos\data-05-sql\artifacts\duckdb\civic_event.duckdb
+2026-02-13 19:04:12 | INFO | P05 | RUN SQL script: C:\Repos\data-05-sql\sql\duckdb\tmims_civic_event_clean.sql
+2026-02-13 19:26:02 | INFO | P05 | === RUN START ===
+2026-02-13 19:26:02 | INFO | P05 | project=P05 Pipeline Example (DuckDB)
+2026-02-13 19:26:02 | INFO | P05 | repo_dir=data-05-sql
+2026-02-13 19:26:02 | INFO | P05 | python=3.14.2
+2026-02-13 19:26:02 | INFO | P05 | os=Windows 11
+2026-02-13 19:26:02 | INFO | P05 | shell=powershell
+2026-02-13 19:26:02 | INFO | P05 | cwd=.
+2026-02-13 19:26:02 | INFO | P05 | github_actions=False
+2026-02-13 19:26:02 | INFO | P05 | START main()
+2026-02-13 19:26:02 | INFO | P05 | ROOT_DIR: C:\Repos\data-05-sql
+2026-02-13 19:26:02 | INFO | P05 | DATA_DIR: C:\Repos\data-05-sql\data\civic_event
+2026-02-13 19:26:02 | INFO | P05 | SQL_DIR: C:\Repos\data-05-sql\sql\duckdb
+2026-02-13 19:26:02 | INFO | P05 | DB_PATH: C:\Repos\data-05-sql\artifacts\duckdb\civic_event.duckdb
+2026-02-13 19:26:02 | INFO | P05 | RUN SQL script: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_clean.sql
+2026-02-13 20:01:19 | INFO | P05 | === RUN START ===
+2026-02-13 20:01:19 | INFO | P05 | project=P05 Pipeline Example (DuckDB)
+2026-02-13 20:01:19 | INFO | P05 | repo_dir=data-05-sql
+2026-02-13 20:01:19 | INFO | P05 | python=3.14.2
+2026-02-13 20:01:19 | INFO | P05 | os=Windows 11
+2026-02-13 20:01:19 | INFO | P05 | shell=powershell
+2026-02-13 20:01:19 | INFO | P05 | cwd=.
+2026-02-13 20:01:19 | INFO | P05 | github_actions=False
+2026-02-13 20:01:19 | INFO | P05 | START main()
+2026-02-13 20:01:19 | INFO | P05 | ROOT_DIR: C:\Repos\data-05-sql
+2026-02-13 20:01:19 | INFO | P05 | DATA_DIR: C:\Repos\data-05-sql\data\civic_event
+2026-02-13 20:01:19 | INFO | P05 | SQL_DIR: C:\Repos\data-05-sql\sql\duckdb
+2026-02-13 20:01:19 | INFO | P05 | DB_PATH: C:\Repos\data-05-sql\artifacts\duckdb\civic_event.duckdb
+2026-02-13 20:01:19 | INFO | P05 | RUN SQL script: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_clean.sql
+2026-02-13 20:01:19 | INFO | P05 | DONE SQL script: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_clean.sql
+2026-02-13 20:01:19 | INFO | P05 | RUN SQL script: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_bootstrap.sql
+2026-02-13 20:05:16 | INFO | P05 | === RUN START ===
+2026-02-13 20:05:16 | INFO | P05 | project=P05 Pipeline Example (DuckDB)
+2026-02-13 20:05:16 | INFO | P05 | repo_dir=data-05-sql
+2026-02-13 20:05:16 | INFO | P05 | python=3.14.2
+2026-02-13 20:05:16 | INFO | P05 | os=Windows 11
+2026-02-13 20:05:16 | INFO | P05 | shell=powershell
+2026-02-13 20:05:16 | INFO | P05 | cwd=.
+2026-02-13 20:05:16 | INFO | P05 | github_actions=False
+2026-02-13 20:05:16 | INFO | P05 | START main()
+2026-02-13 20:05:16 | INFO | P05 | ROOT_DIR: C:\Repos\data-05-sql
+2026-02-13 20:05:16 | INFO | P05 | DATA_DIR: C:\Repos\data-05-sql\data\civic_event
+2026-02-13 20:05:16 | INFO | P05 | SQL_DIR: C:\Repos\data-05-sql\sql\duckdb
+2026-02-13 20:05:16 | INFO | P05 | DB_PATH: C:\Repos\data-05-sql\artifacts\duckdb\civic_event.duckdb
+2026-02-13 20:05:16 | INFO | P05 | RUN SQL script: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_clean.sql
+2026-02-13 20:05:16 | INFO | P05 | DONE SQL script: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_clean.sql
+2026-02-13 20:05:16 | INFO | P05 | RUN SQL script: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_bootstrap.sql
+2026-02-13 20:06:55 | INFO | P05 | === RUN START ===
+2026-02-13 20:06:55 | INFO | P05 | project=P05 Pipeline Example (DuckDB)
+2026-02-13 20:06:55 | INFO | P05 | repo_dir=data-05-sql
+2026-02-13 20:06:55 | INFO | P05 | python=3.14.2
+2026-02-13 20:06:56 | INFO | P05 | os=Windows 11
+2026-02-13 20:06:56 | INFO | P05 | shell=powershell
+2026-02-13 20:06:56 | INFO | P05 | cwd=.
+2026-02-13 20:06:56 | INFO | P05 | github_actions=False
+2026-02-13 20:06:56 | INFO | P05 | START main()
+2026-02-13 20:06:56 | INFO | P05 | ROOT_DIR: C:\Repos\data-05-sql
+2026-02-13 20:06:56 | INFO | P05 | DATA_DIR: C:\Repos\data-05-sql\data\civic_event
+2026-02-13 20:06:56 | INFO | P05 | SQL_DIR: C:\Repos\data-05-sql\sql\duckdb
+2026-02-13 20:06:56 | INFO | P05 | DB_PATH: C:\Repos\data-05-sql\artifacts\duckdb\civic_event.duckdb
+2026-02-13 20:06:56 | INFO | P05 | RUN SQL script: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_clean.sql
+2026-02-13 20:06:56 | INFO | P05 | DONE SQL script: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_clean.sql
+2026-02-13 20:06:56 | INFO | P05 | RUN SQL script: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_bootstrap.sql
+2026-02-13 20:08:27 | INFO | P05 | === RUN START ===
+2026-02-13 20:08:27 | INFO | P05 | project=P05 Pipeline Example (DuckDB)
+2026-02-13 20:08:27 | INFO | P05 | repo_dir=data-05-sql
+2026-02-13 20:08:27 | INFO | P05 | python=3.14.2
+2026-02-13 20:08:27 | INFO | P05 | os=Windows 11
+2026-02-13 20:08:27 | INFO | P05 | shell=powershell
+2026-02-13 20:08:27 | INFO | P05 | cwd=.
+2026-02-13 20:08:27 | INFO | P05 | github_actions=False
+2026-02-13 20:08:27 | INFO | P05 | START main()
+2026-02-13 20:08:27 | INFO | P05 | ROOT_DIR: C:\Repos\data-05-sql
+2026-02-13 20:08:27 | INFO | P05 | DATA_DIR: C:\Repos\data-05-sql\data\civic_event
+2026-02-13 20:08:27 | INFO | P05 | SQL_DIR: C:\Repos\data-05-sql\sql\duckdb
+2026-02-13 20:08:27 | INFO | P05 | DB_PATH: C:\Repos\data-05-sql\artifacts\duckdb\civic_event.duckdb
+2026-02-13 20:08:27 | INFO | P05 | RUN SQL script: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_clean.sql
+2026-02-13 20:08:27 | INFO | P05 | DONE SQL script: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_clean.sql
+2026-02-13 20:08:27 | INFO | P05 | RUN SQL script: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_bootstrap.sql
+2026-02-13 20:09:46 | INFO | P05 | === RUN START ===
+2026-02-13 20:09:46 | INFO | P05 | project=P05 Pipeline Example (DuckDB)
+2026-02-13 20:09:46 | INFO | P05 | repo_dir=data-05-sql
+2026-02-13 20:09:46 | INFO | P05 | python=3.14.2
+2026-02-13 20:09:46 | INFO | P05 | os=Windows 11
+2026-02-13 20:09:46 | INFO | P05 | shell=powershell
+2026-02-13 20:09:46 | INFO | P05 | cwd=.
+2026-02-13 20:09:46 | INFO | P05 | github_actions=False
+2026-02-13 20:09:46 | INFO | P05 | START main()
+2026-02-13 20:09:46 | INFO | P05 | ROOT_DIR: C:\Repos\data-05-sql
+2026-02-13 20:09:46 | INFO | P05 | DATA_DIR: C:\Repos\data-05-sql\data\civic_event
+2026-02-13 20:09:46 | INFO | P05 | SQL_DIR: C:\Repos\data-05-sql\sql\duckdb
+2026-02-13 20:09:46 | INFO | P05 | DB_PATH: C:\Repos\data-05-sql\artifacts\duckdb\civic_event.duckdb
+2026-02-13 20:09:46 | INFO | P05 | RUN SQL script: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_clean.sql
+2026-02-13 20:09:46 | INFO | P05 | DONE SQL script: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_clean.sql
+2026-02-13 20:09:46 | INFO | P05 | RUN SQL script: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_bootstrap.sql
+2026-02-13 20:09:46 | INFO | P05 | DONE SQL script: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_bootstrap.sql
+2026-02-13 20:09:46 | INFO | P05 | 
+2026-02-13 20:09:46 | INFO | P05 | RUN SQL query: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_query_attendance_count.sql
+2026-02-13 20:09:46 | INFO | P05 | ====================================
+2026-02-13 20:09:46 | INFO | P05 | chau_civic_event_query_attendance_count.sql
+2026-02-13 20:09:46 | INFO | P05 | ====================================
+2026-02-13 20:09:46 | INFO | P05 | total_attendees
+2026-02-13 20:09:46 | INFO | P05 | 5
+2026-02-13 20:09:46 | INFO | P05 | 
+2026-02-13 20:09:46 | INFO | P05 | RUN SQL query: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_query_civic_event_count.sql
+2026-02-13 20:09:46 | INFO | P05 | ====================================
+2026-02-13 20:09:46 | INFO | P05 | chau_civic_event_query_civic_event_count.sql
+2026-02-13 20:09:46 | INFO | P05 | ====================================
+2026-02-13 20:09:46 | INFO | P05 | event_count
+2026-02-13 20:09:46 | INFO | P05 | 3
+2026-02-13 20:09:46 | INFO | P05 | 
+2026-02-13 20:09:46 | INFO | P05 | RUN SQL query: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_query_attendance_by_event.sql
+2026-02-13 20:13:40 | INFO | P05 | === RUN START ===
+2026-02-13 20:13:40 | INFO | P05 | project=P05 Pipeline Example (DuckDB)
+2026-02-13 20:13:40 | INFO | P05 | repo_dir=data-05-sql
+2026-02-13 20:13:40 | INFO | P05 | python=3.14.2
+2026-02-13 20:13:40 | INFO | P05 | os=Windows 11
+2026-02-13 20:13:40 | INFO | P05 | shell=powershell
+2026-02-13 20:13:40 | INFO | P05 | cwd=.
+2026-02-13 20:13:40 | INFO | P05 | github_actions=False
+2026-02-13 20:13:40 | INFO | P05 | START main()
+2026-02-13 20:13:40 | INFO | P05 | ROOT_DIR: C:\Repos\data-05-sql
+2026-02-13 20:13:40 | INFO | P05 | DATA_DIR: C:\Repos\data-05-sql\data\civic_event
+2026-02-13 20:13:40 | INFO | P05 | SQL_DIR: C:\Repos\data-05-sql\sql\duckdb
+2026-02-13 20:13:40 | INFO | P05 | DB_PATH: C:\Repos\data-05-sql\artifacts\duckdb\civic_event.duckdb
+2026-02-13 20:13:40 | INFO | P05 | RUN SQL script: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_clean.sql
+2026-02-13 20:13:40 | INFO | P05 | DONE SQL script: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_clean.sql
+2026-02-13 20:13:40 | INFO | P05 | RUN SQL script: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_bootstrap.sql
+2026-02-13 20:13:41 | INFO | P05 | DONE SQL script: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_bootstrap.sql
+2026-02-13 20:13:41 | INFO | P05 | 
+2026-02-13 20:13:41 | INFO | P05 | RUN SQL query: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_query_attendance_count.sql
+2026-02-13 20:13:41 | INFO | P05 | ====================================
+2026-02-13 20:13:41 | INFO | P05 | chau_civic_event_query_attendance_count.sql
+2026-02-13 20:13:41 | INFO | P05 | ====================================
+2026-02-13 20:13:41 | INFO | P05 | total_attendees
+2026-02-13 20:13:41 | INFO | P05 | 5
+2026-02-13 20:13:41 | INFO | P05 | 
+2026-02-13 20:13:41 | INFO | P05 | RUN SQL query: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_query_civic_event_count.sql
+2026-02-13 20:13:41 | INFO | P05 | ====================================
+2026-02-13 20:13:41 | INFO | P05 | chau_civic_event_query_civic_event_count.sql
+2026-02-13 20:13:41 | INFO | P05 | ====================================
+2026-02-13 20:13:41 | INFO | P05 | event_count
+2026-02-13 20:13:41 | INFO | P05 | 3
+2026-02-13 20:13:41 | INFO | P05 | 
+2026-02-13 20:13:41 | INFO | P05 | RUN SQL query: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_query_attendance_by_event.sql
+2026-02-13 20:14:47 | INFO | P05 | === RUN START ===
+2026-02-13 20:14:47 | INFO | P05 | project=P05 Pipeline Example (DuckDB)
+2026-02-13 20:14:47 | INFO | P05 | repo_dir=data-05-sql
+2026-02-13 20:14:47 | INFO | P05 | python=3.14.2
+2026-02-13 20:14:47 | INFO | P05 | os=Windows 11
+2026-02-13 20:14:47 | INFO | P05 | shell=powershell
+2026-02-13 20:14:47 | INFO | P05 | cwd=.
+2026-02-13 20:14:47 | INFO | P05 | github_actions=False
+2026-02-13 20:14:47 | INFO | P05 | START main()
+2026-02-13 20:14:47 | INFO | P05 | ROOT_DIR: C:\Repos\data-05-sql
+2026-02-13 20:14:47 | INFO | P05 | DATA_DIR: C:\Repos\data-05-sql\data\civic_event
+2026-02-13 20:14:47 | INFO | P05 | SQL_DIR: C:\Repos\data-05-sql\sql\duckdb
+2026-02-13 20:14:47 | INFO | P05 | DB_PATH: C:\Repos\data-05-sql\artifacts\duckdb\civic_event.duckdb
+2026-02-13 20:14:47 | INFO | P05 | RUN SQL script: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_clean.sql
+2026-02-13 20:14:47 | INFO | P05 | DONE SQL script: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_clean.sql
+2026-02-13 20:14:47 | INFO | P05 | RUN SQL script: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_bootstrap.sql
+2026-02-13 20:14:47 | INFO | P05 | DONE SQL script: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_bootstrap.sql
+2026-02-13 20:14:47 | INFO | P05 | 
+2026-02-13 20:14:47 | INFO | P05 | RUN SQL query: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_query_attendance_count.sql
+2026-02-13 20:14:47 | INFO | P05 | ====================================
+2026-02-13 20:14:47 | INFO | P05 | chau_civic_event_query_attendance_count.sql
+2026-02-13 20:14:47 | INFO | P05 | ====================================
+2026-02-13 20:14:47 | INFO | P05 | total_attendees
+2026-02-13 20:14:47 | INFO | P05 | 5
+2026-02-13 20:14:47 | INFO | P05 | 
+2026-02-13 20:14:47 | INFO | P05 | RUN SQL query: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_query_civic_event_count.sql
+2026-02-13 20:14:47 | INFO | P05 | ====================================
+2026-02-13 20:14:47 | INFO | P05 | chau_civic_event_query_civic_event_count.sql
+2026-02-13 20:14:47 | INFO | P05 | ====================================
+2026-02-13 20:14:47 | INFO | P05 | event_count
+2026-02-13 20:14:47 | INFO | P05 | 3
+2026-02-13 20:14:47 | INFO | P05 | 
+2026-02-13 20:14:47 | INFO | P05 | RUN SQL query: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_query_attendance_by_event.sql
+2026-02-13 20:14:48 | INFO | P05 | ====================================
+2026-02-13 20:14:48 | INFO | P05 | chau_civic_event_query_attendance_by_event.sql
+2026-02-13 20:14:48 | INFO | P05 | ====================================
+2026-02-13 20:14:48 | INFO | P05 | attendance_count, total_attendance, avg_attendance_amount
+2026-02-13 20:14:48 | INFO | P05 | 5, 105.0, 21.0
+2026-02-13 20:14:48 | INFO | P05 | 
+2026-02-13 20:14:48 | INFO | P05 | RUN SQL query: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_query_attendance_by_category.sql
+2026-02-13 20:14:48 | INFO | P05 | ====================================
+2026-02-13 20:14:48 | INFO | P05 | chau_civic_event_query_attendance_by_category.sql
+2026-02-13 20:14:48 | INFO | P05 | ====================================
+2026-02-13 20:14:48 | INFO | P05 | civic_event_id, attendance_count, total_attendance, avg_attendance_amount
+2026-02-13 20:14:48 | INFO | P05 | E001, 2, 75.0, 37.5
+2026-02-13 20:14:48 | INFO | P05 | E003, 1, 20.0, 20.0
+2026-02-13 20:14:48 | INFO | P05 | E002, 2, 10.0, 5.0
+2026-02-13 20:14:48 | INFO | P05 | 
+2026-02-13 20:14:48 | INFO | P05 | RUN SQL query: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_query_kpi_attendance.sql
+2026-02-13 20:15:29 | INFO | P05 | === RUN START ===
+2026-02-13 20:15:29 | INFO | P05 | project=P05 Pipeline Example (DuckDB)
+2026-02-13 20:15:29 | INFO | P05 | repo_dir=data-05-sql
+2026-02-13 20:15:29 | INFO | P05 | python=3.14.2
+2026-02-13 20:15:29 | INFO | P05 | os=Windows 11
+2026-02-13 20:15:29 | INFO | P05 | shell=powershell
+2026-02-13 20:15:29 | INFO | P05 | cwd=.
+2026-02-13 20:15:29 | INFO | P05 | github_actions=False
+2026-02-13 20:15:29 | INFO | P05 | START main()
+2026-02-13 20:15:29 | INFO | P05 | ROOT_DIR: C:\Repos\data-05-sql
+2026-02-13 20:15:29 | INFO | P05 | DATA_DIR: C:\Repos\data-05-sql\data\civic_event
+2026-02-13 20:15:29 | INFO | P05 | SQL_DIR: C:\Repos\data-05-sql\sql\duckdb
+2026-02-13 20:15:29 | INFO | P05 | DB_PATH: C:\Repos\data-05-sql\artifacts\duckdb\civic_event.duckdb
+2026-02-13 20:15:29 | INFO | P05 | RUN SQL script: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_clean.sql
+2026-02-13 20:15:29 | INFO | P05 | DONE SQL script: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_clean.sql
+2026-02-13 20:15:29 | INFO | P05 | RUN SQL script: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_bootstrap.sql
+2026-02-13 20:15:29 | INFO | P05 | DONE SQL script: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_bootstrap.sql
+2026-02-13 20:15:29 | INFO | P05 | 
+2026-02-13 20:15:29 | INFO | P05 | RUN SQL query: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_query_attendance_count.sql
+2026-02-13 20:15:29 | INFO | P05 | ====================================
+2026-02-13 20:15:29 | INFO | P05 | chau_civic_event_query_attendance_count.sql
+2026-02-13 20:15:29 | INFO | P05 | ====================================
+2026-02-13 20:15:29 | INFO | P05 | total_attendees
+2026-02-13 20:15:29 | INFO | P05 | 5
+2026-02-13 20:15:29 | INFO | P05 | 
+2026-02-13 20:15:29 | INFO | P05 | RUN SQL query: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_query_civic_event_count.sql
+2026-02-13 20:15:29 | INFO | P05 | ====================================
+2026-02-13 20:15:29 | INFO | P05 | chau_civic_event_query_civic_event_count.sql
+2026-02-13 20:15:29 | INFO | P05 | ====================================
+2026-02-13 20:15:29 | INFO | P05 | event_count
+2026-02-13 20:15:29 | INFO | P05 | 3
+2026-02-13 20:15:29 | INFO | P05 | 
+2026-02-13 20:15:29 | INFO | P05 | RUN SQL query: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_query_attendance_by_event.sql
+2026-02-13 20:15:29 | INFO | P05 | ====================================
+2026-02-13 20:15:29 | INFO | P05 | chau_civic_event_query_attendance_by_event.sql
+2026-02-13 20:15:29 | INFO | P05 | ====================================
+2026-02-13 20:15:29 | INFO | P05 | attendance_count, total_attendance, avg_attendance_amount
+2026-02-13 20:15:29 | INFO | P05 | 5, 105.0, 21.0
+2026-02-13 20:15:29 | INFO | P05 | 
+2026-02-13 20:15:29 | INFO | P05 | RUN SQL query: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_query_attendance_by_category.sql
+2026-02-13 20:15:29 | INFO | P05 | ====================================
+2026-02-13 20:15:29 | INFO | P05 | chau_civic_event_query_attendance_by_category.sql
+2026-02-13 20:15:29 | INFO | P05 | ====================================
+2026-02-13 20:15:29 | INFO | P05 | civic_event_id, attendance_count, total_attendance, avg_attendance_amount
+2026-02-13 20:15:29 | INFO | P05 | E001, 2, 75.0, 37.5
+2026-02-13 20:15:29 | INFO | P05 | E003, 1, 20.0, 20.0
+2026-02-13 20:15:29 | INFO | P05 | E002, 2, 10.0, 5.0
+2026-02-13 20:15:29 | INFO | P05 | 
+2026-02-13 20:15:29 | INFO | P05 | RUN SQL query: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_query_kpi_attendance.sql
+2026-02-13 20:15:49 | INFO | P05 | === RUN START ===
+2026-02-13 20:15:49 | INFO | P05 | project=P05 Pipeline Example (DuckDB)
+2026-02-13 20:15:49 | INFO | P05 | repo_dir=data-05-sql
+2026-02-13 20:15:49 | INFO | P05 | python=3.14.2
+2026-02-13 20:15:49 | INFO | P05 | os=Windows 11
+2026-02-13 20:15:49 | INFO | P05 | shell=powershell
+2026-02-13 20:15:49 | INFO | P05 | cwd=.
+2026-02-13 20:15:49 | INFO | P05 | github_actions=False
+2026-02-13 20:15:49 | INFO | P05 | START main()
+2026-02-13 20:15:49 | INFO | P05 | ROOT_DIR: C:\Repos\data-05-sql
+2026-02-13 20:15:49 | INFO | P05 | DATA_DIR: C:\Repos\data-05-sql\data\civic_event
+2026-02-13 20:15:49 | INFO | P05 | SQL_DIR: C:\Repos\data-05-sql\sql\duckdb
+2026-02-13 20:15:49 | INFO | P05 | DB_PATH: C:\Repos\data-05-sql\artifacts\duckdb\civic_event.duckdb
+2026-02-13 20:15:49 | INFO | P05 | RUN SQL script: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_clean.sql
+2026-02-13 20:15:49 | INFO | P05 | DONE SQL script: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_clean.sql
+2026-02-13 20:15:49 | INFO | P05 | RUN SQL script: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_bootstrap.sql
+2026-02-13 20:15:49 | INFO | P05 | DONE SQL script: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_bootstrap.sql
+2026-02-13 20:15:49 | INFO | P05 | 
+2026-02-13 20:15:49 | INFO | P05 | RUN SQL query: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_query_attendance_count.sql
+2026-02-13 20:15:49 | INFO | P05 | ====================================
+2026-02-13 20:15:49 | INFO | P05 | chau_civic_event_query_attendance_count.sql
+2026-02-13 20:15:49 | INFO | P05 | ====================================
+2026-02-13 20:15:49 | INFO | P05 | total_attendees
+2026-02-13 20:15:49 | INFO | P05 | 5
+2026-02-13 20:15:49 | INFO | P05 | 
+2026-02-13 20:15:49 | INFO | P05 | RUN SQL query: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_query_civic_event_count.sql
+2026-02-13 20:15:49 | INFO | P05 | ====================================
+2026-02-13 20:15:49 | INFO | P05 | chau_civic_event_query_civic_event_count.sql
+2026-02-13 20:15:49 | INFO | P05 | ====================================
+2026-02-13 20:15:49 | INFO | P05 | event_count
+2026-02-13 20:15:49 | INFO | P05 | 3
+2026-02-13 20:15:49 | INFO | P05 | 
+2026-02-13 20:15:49 | INFO | P05 | RUN SQL query: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_query_attendance_by_event.sql
+2026-02-13 20:15:49 | INFO | P05 | ====================================
+2026-02-13 20:15:49 | INFO | P05 | chau_civic_event_query_attendance_by_event.sql
+2026-02-13 20:15:49 | INFO | P05 | ====================================
+2026-02-13 20:15:49 | INFO | P05 | attendance_count, total_attendance, avg_attendance_amount
+2026-02-13 20:15:49 | INFO | P05 | 5, 105.0, 21.0
+2026-02-13 20:15:49 | INFO | P05 | 
+2026-02-13 20:15:49 | INFO | P05 | RUN SQL query: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_query_attendance_by_category.sql
+2026-02-13 20:15:49 | INFO | P05 | ====================================
+2026-02-13 20:15:49 | INFO | P05 | chau_civic_event_query_attendance_by_category.sql
+2026-02-13 20:15:49 | INFO | P05 | ====================================
+2026-02-13 20:15:49 | INFO | P05 | civic_event_id, attendance_count, total_attendance, avg_attendance_amount
+2026-02-13 20:15:49 | INFO | P05 | E001, 2, 75.0, 37.5
+2026-02-13 20:15:49 | INFO | P05 | E003, 1, 20.0, 20.0
+2026-02-13 20:15:49 | INFO | P05 | E002, 2, 10.0, 5.0
+2026-02-13 20:15:49 | INFO | P05 | 
+2026-02-13 20:15:49 | INFO | P05 | RUN SQL query: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_query_kpi_attendance.sql
+2026-02-13 20:16:53 | INFO | P05 | === RUN START ===
+2026-02-13 20:16:53 | INFO | P05 | project=P05 Pipeline Example (DuckDB)
+2026-02-13 20:16:53 | INFO | P05 | repo_dir=data-05-sql
+2026-02-13 20:16:53 | INFO | P05 | python=3.14.2
+2026-02-13 20:16:53 | INFO | P05 | os=Windows 11
+2026-02-13 20:16:53 | INFO | P05 | shell=powershell
+2026-02-13 20:16:53 | INFO | P05 | cwd=.
+2026-02-13 20:16:53 | INFO | P05 | github_actions=False
+2026-02-13 20:16:53 | INFO | P05 | START main()
+2026-02-13 20:16:53 | INFO | P05 | ROOT_DIR: C:\Repos\data-05-sql
+2026-02-13 20:16:53 | INFO | P05 | DATA_DIR: C:\Repos\data-05-sql\data\civic_event
+2026-02-13 20:16:53 | INFO | P05 | SQL_DIR: C:\Repos\data-05-sql\sql\duckdb
+2026-02-13 20:16:53 | INFO | P05 | DB_PATH: C:\Repos\data-05-sql\artifacts\duckdb\civic_event.duckdb
+2026-02-13 20:16:53 | INFO | P05 | RUN SQL script: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_clean.sql
+2026-02-13 20:16:53 | INFO | P05 | DONE SQL script: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_clean.sql
+2026-02-13 20:16:53 | INFO | P05 | RUN SQL script: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_bootstrap.sql
+2026-02-13 20:16:53 | INFO | P05 | DONE SQL script: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_bootstrap.sql
+2026-02-13 20:16:53 | INFO | P05 | 
+2026-02-13 20:16:53 | INFO | P05 | RUN SQL query: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_query_attendance_count.sql
+2026-02-13 20:16:53 | INFO | P05 | ====================================
+2026-02-13 20:16:53 | INFO | P05 | chau_civic_event_query_attendance_count.sql
+2026-02-13 20:16:53 | INFO | P05 | ====================================
+2026-02-13 20:16:53 | INFO | P05 | total_attendees
+2026-02-13 20:16:53 | INFO | P05 | 5
+2026-02-13 20:16:53 | INFO | P05 | 
+2026-02-13 20:16:53 | INFO | P05 | RUN SQL query: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_query_civic_event_count.sql
+2026-02-13 20:16:53 | INFO | P05 | ====================================
+2026-02-13 20:16:53 | INFO | P05 | chau_civic_event_query_civic_event_count.sql
+2026-02-13 20:16:53 | INFO | P05 | ====================================
+2026-02-13 20:16:53 | INFO | P05 | event_count
+2026-02-13 20:16:53 | INFO | P05 | 3
+2026-02-13 20:16:53 | INFO | P05 | 
+2026-02-13 20:16:53 | INFO | P05 | RUN SQL query: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_query_attendance_by_event.sql
+2026-02-13 20:16:53 | INFO | P05 | ====================================
+2026-02-13 20:16:53 | INFO | P05 | chau_civic_event_query_attendance_by_event.sql
+2026-02-13 20:16:53 | INFO | P05 | ====================================
+2026-02-13 20:16:53 | INFO | P05 | attendance_count, total_attendance, avg_attendance_amount
+2026-02-13 20:16:53 | INFO | P05 | 5, 105.0, 21.0
+2026-02-13 20:16:53 | INFO | P05 | 
+2026-02-13 20:16:53 | INFO | P05 | RUN SQL query: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_query_attendance_by_category.sql
+2026-02-13 20:16:53 | INFO | P05 | ====================================
+2026-02-13 20:16:53 | INFO | P05 | chau_civic_event_query_attendance_by_category.sql
+2026-02-13 20:16:53 | INFO | P05 | ====================================
+2026-02-13 20:16:53 | INFO | P05 | civic_event_id, attendance_count, total_attendance, avg_attendance_amount
+2026-02-13 20:16:53 | INFO | P05 | E001, 2, 75.0, 37.5
+2026-02-13 20:16:53 | INFO | P05 | E003, 1, 20.0, 20.0
+2026-02-13 20:16:53 | INFO | P05 | E002, 2, 10.0, 5.0
+2026-02-13 20:16:53 | INFO | P05 | 
+2026-02-13 20:16:53 | INFO | P05 | RUN SQL query: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_query_kpi_attendance.sql
+2026-02-13 20:17:13 | INFO | P05 | === RUN START ===
+2026-02-13 20:17:13 | INFO | P05 | project=P05 Pipeline Example (DuckDB)
+2026-02-13 20:17:13 | INFO | P05 | repo_dir=data-05-sql
+2026-02-13 20:17:13 | INFO | P05 | python=3.14.2
+2026-02-13 20:17:13 | INFO | P05 | os=Windows 11
+2026-02-13 20:17:13 | INFO | P05 | shell=powershell
+2026-02-13 20:17:13 | INFO | P05 | cwd=.
+2026-02-13 20:17:13 | INFO | P05 | github_actions=False
+2026-02-13 20:17:13 | INFO | P05 | START main()
+2026-02-13 20:17:13 | INFO | P05 | ROOT_DIR: C:\Repos\data-05-sql
+2026-02-13 20:17:13 | INFO | P05 | DATA_DIR: C:\Repos\data-05-sql\data\civic_event
+2026-02-13 20:17:13 | INFO | P05 | SQL_DIR: C:\Repos\data-05-sql\sql\duckdb
+2026-02-13 20:17:13 | INFO | P05 | DB_PATH: C:\Repos\data-05-sql\artifacts\duckdb\civic_event.duckdb
+2026-02-13 20:17:13 | INFO | P05 | RUN SQL script: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_clean.sql
+2026-02-13 20:17:13 | INFO | P05 | DONE SQL script: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_clean.sql
+2026-02-13 20:17:13 | INFO | P05 | RUN SQL script: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_bootstrap.sql
+2026-02-13 20:17:13 | INFO | P05 | DONE SQL script: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_bootstrap.sql
+2026-02-13 20:17:13 | INFO | P05 | 
+2026-02-13 20:17:13 | INFO | P05 | RUN SQL query: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_query_attendance_count.sql
+2026-02-13 20:17:13 | INFO | P05 | ====================================
+2026-02-13 20:17:13 | INFO | P05 | chau_civic_event_query_attendance_count.sql
+2026-02-13 20:17:13 | INFO | P05 | ====================================
+2026-02-13 20:17:13 | INFO | P05 | total_attendees
+2026-02-13 20:17:13 | INFO | P05 | 5
+2026-02-13 20:17:13 | INFO | P05 | 
+2026-02-13 20:17:13 | INFO | P05 | RUN SQL query: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_query_civic_event_count.sql
+2026-02-13 20:17:13 | INFO | P05 | ====================================
+2026-02-13 20:17:13 | INFO | P05 | chau_civic_event_query_civic_event_count.sql
+2026-02-13 20:17:13 | INFO | P05 | ====================================
+2026-02-13 20:17:13 | INFO | P05 | event_count
+2026-02-13 20:17:13 | INFO | P05 | 3
+2026-02-13 20:17:13 | INFO | P05 | 
+2026-02-13 20:17:13 | INFO | P05 | RUN SQL query: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_query_attendance_by_event.sql
+2026-02-13 20:17:13 | INFO | P05 | ====================================
+2026-02-13 20:17:13 | INFO | P05 | chau_civic_event_query_attendance_by_event.sql
+2026-02-13 20:17:13 | INFO | P05 | ====================================
+2026-02-13 20:17:13 | INFO | P05 | attendance_count, total_attendance, avg_attendance_amount
+2026-02-13 20:17:13 | INFO | P05 | 5, 105.0, 21.0
+2026-02-13 20:17:13 | INFO | P05 | 
+2026-02-13 20:17:13 | INFO | P05 | RUN SQL query: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_query_attendance_by_category.sql
+2026-02-13 20:17:13 | INFO | P05 | ====================================
+2026-02-13 20:17:13 | INFO | P05 | chau_civic_event_query_attendance_by_category.sql
+2026-02-13 20:17:13 | INFO | P05 | ====================================
+2026-02-13 20:17:13 | INFO | P05 | civic_event_id, attendance_count, total_attendance, avg_attendance_amount
+2026-02-13 20:17:13 | INFO | P05 | E001, 2, 75.0, 37.5
+2026-02-13 20:17:13 | INFO | P05 | E003, 1, 20.0, 20.0
+2026-02-13 20:17:13 | INFO | P05 | E002, 2, 10.0, 5.0
+2026-02-13 20:17:13 | INFO | P05 | 
+2026-02-13 20:17:13 | INFO | P05 | RUN SQL query: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_query_kpi_attendance.sql
+2026-02-13 20:18:22 | INFO | P05 | === RUN START ===
+2026-02-13 20:18:22 | INFO | P05 | project=P05 Pipeline Example (DuckDB)
+2026-02-13 20:18:22 | INFO | P05 | repo_dir=data-05-sql
+2026-02-13 20:18:22 | INFO | P05 | python=3.14.2
+2026-02-13 20:18:22 | INFO | P05 | os=Windows 11
+2026-02-13 20:18:22 | INFO | P05 | shell=powershell
+2026-02-13 20:18:22 | INFO | P05 | cwd=.
+2026-02-13 20:18:22 | INFO | P05 | github_actions=False
+2026-02-13 20:18:22 | INFO | P05 | START main()
+2026-02-13 20:18:22 | INFO | P05 | ROOT_DIR: C:\Repos\data-05-sql
+2026-02-13 20:18:22 | INFO | P05 | DATA_DIR: C:\Repos\data-05-sql\data\civic_event
+2026-02-13 20:18:22 | INFO | P05 | SQL_DIR: C:\Repos\data-05-sql\sql\duckdb
+2026-02-13 20:18:22 | INFO | P05 | DB_PATH: C:\Repos\data-05-sql\artifacts\duckdb\civic_event.duckdb
+2026-02-13 20:18:22 | INFO | P05 | RUN SQL script: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_clean.sql
+2026-02-13 20:18:22 | INFO | P05 | DONE SQL script: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_clean.sql
+2026-02-13 20:18:22 | INFO | P05 | RUN SQL script: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_bootstrap.sql
+2026-02-13 20:18:23 | INFO | P05 | DONE SQL script: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_bootstrap.sql
+2026-02-13 20:18:23 | INFO | P05 | 
+2026-02-13 20:18:23 | INFO | P05 | RUN SQL query: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_query_attendance_count.sql
+2026-02-13 20:18:23 | INFO | P05 | ====================================
+2026-02-13 20:18:23 | INFO | P05 | chau_civic_event_query_attendance_count.sql
+2026-02-13 20:18:23 | INFO | P05 | ====================================
+2026-02-13 20:18:23 | INFO | P05 | total_attendees
+2026-02-13 20:18:23 | INFO | P05 | 5
+2026-02-13 20:18:23 | INFO | P05 | 
+2026-02-13 20:18:23 | INFO | P05 | RUN SQL query: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_query_civic_event_count.sql
+2026-02-13 20:18:23 | INFO | P05 | ====================================
+2026-02-13 20:18:23 | INFO | P05 | chau_civic_event_query_civic_event_count.sql
+2026-02-13 20:18:23 | INFO | P05 | ====================================
+2026-02-13 20:18:23 | INFO | P05 | event_count
+2026-02-13 20:18:23 | INFO | P05 | 3
+2026-02-13 20:18:23 | INFO | P05 | 
+2026-02-13 20:18:23 | INFO | P05 | RUN SQL query: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_query_attendance_by_event.sql
+2026-02-13 20:18:23 | INFO | P05 | ====================================
+2026-02-13 20:18:23 | INFO | P05 | chau_civic_event_query_attendance_by_event.sql
+2026-02-13 20:18:23 | INFO | P05 | ====================================
+2026-02-13 20:18:23 | INFO | P05 | attendance_count, total_attendance, avg_attendance_amount
+2026-02-13 20:18:23 | INFO | P05 | 5, 105.0, 21.0
+2026-02-13 20:18:23 | INFO | P05 | 
+2026-02-13 20:18:23 | INFO | P05 | RUN SQL query: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_query_attendance_by_category.sql
+2026-02-13 20:18:23 | INFO | P05 | ====================================
+2026-02-13 20:18:23 | INFO | P05 | chau_civic_event_query_attendance_by_category.sql
+2026-02-13 20:18:23 | INFO | P05 | ====================================
+2026-02-13 20:18:23 | INFO | P05 | civic_event_id, attendance_count, total_attendance, avg_attendance_amount
+2026-02-13 20:18:23 | INFO | P05 | E001, 2, 75.0, 37.5
+2026-02-13 20:18:23 | INFO | P05 | E003, 1, 20.0, 20.0
+2026-02-13 20:18:23 | INFO | P05 | E002, 2, 10.0, 5.0
+2026-02-13 20:18:23 | INFO | P05 | 
+2026-02-13 20:18:23 | INFO | P05 | RUN SQL query: C:\Repos\data-05-sql\sql\duckdb\chau_civic_event_query_kpi_attendance.sql
+2026-02-13 20:18:23 | INFO | P05 | ====================================
+2026-02-13 20:18:23 | INFO | P05 | chau_civic_event_query_kpi_attendance.sql
+2026-02-13 20:18:23 | INFO | P05 | ====================================
+2026-02-13 20:18:23 | INFO | P05 | civic_event_id, event_name, location, organizer, total_attendance
+2026-02-13 20:18:23 | INFO | P05 | E002, Tech Meetup, Duluth, North Tech Group, 2
+2026-02-13 20:18:23 | INFO | P05 | E001, Winter Fundraiser, Ely, Community Council, 2
+2026-02-13 20:18:23 | INFO | P05 | E003, Arts Fair, Mankato, Arts Alliance, 1
+2026-02-13 20:18:23 | INFO | P05 | END main()
